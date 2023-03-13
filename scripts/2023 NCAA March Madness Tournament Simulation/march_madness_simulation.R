@@ -43,48 +43,42 @@ sample(c('Arizona','Princeton'), size = 1, prob = c(.90, .10))
 #Second Round
 
 #East
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
+sample(c('Purdue','FAU'), size = 1, prob = c(.66, .34))
+sample(c('Duke','Tennessee'), size = 1, prob = c(.45, .55))
+sample(c('Providence','Montana St'), size = 1, prob = c(.75, .25))
+sample(c('USC','Marquette'), size = 1, prob = c(.28, .72))
 
 #West
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
+sample(c('Kansas','Arkansas'), size = 1, prob = c(.67, .33))
+sample(c('Saint Mary','UConn'), size = 1, prob = c(.38, .62))
+sample(c('TCU','Gonzaga'), size = 1, prob = c(.34, .66))
+sample(c('Northwestern','UCLA'), size = 1, prob = c(.26, .74))
 
 #Midwest
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
+sample(c('Houston','Iowa'), size = 1, prob = c(.82, .18))
+sample(c('Miami','Indiana'), size = 1, prob = c(.47, .53))
+sample(c('','Kennesaw State'), size = 1, prob = c(.72, .28))
+sample(c('Texas A&M','Texas'), size = 1, prob = c(.39, .61))
 
 #South
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
+sample(c('Alabama','West Virginia'), size = 1, prob = c(.69, .31))
+sample(c('Charleston','Virginia'), size = 1, prob = c(.38, .62))
+sample(c('Crieghton','Baylor'), size = 1, prob = c(.48, .52))
+sample(c('Utah State','Arizona'), size = 1, prob = c(.42, .58))
 
 #Sweet 16
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
 
 #Elite 8 
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
+sample(c('Alabama','Crieghton'), size = 1, prob = c(.66, .34))
+sample(c('Purdue','Marquette'), size = 1, prob = c(.51, .49))
+sample(c('Miami',''), size = 1, prob = c(.57, .43))
+sample(c('Kansas','Gonzaga'), size = 1, prob = c(.49, .51))
 
 #Final Four 
-sample(c('',''), size = 1, prob = c(,))
-sample(c('',''), size = 1, prob = c(,))
+sample(c('Alabama','Purdue'), size = 1, prob = c(.55, .45))
+sample(c('Miami','Gonzaga'), size = 1, prob = c(.31, .69))
 
 #National Championship
-sample(c('',''), size = 1, prob = c(,))
+sample(c('Alabama','Gonzaga'), size = 1, prob = c(.54, .46))
+
+#Gonzaga wins the 2022-2023 NCAA Championship!
