@@ -25,13 +25,13 @@ sample(c('Houston',' Northern Kentucky'), size = 1, prob = c(.98, .02))
 sample(c('Iowa','Auburn'), size = 1, prob = c(.46, .54))
 sample(c('Miami','Drake'), size = 1, prob = c(.63, .37))
 sample(c('Indiana','Kent State'), size = 1, prob = c(.65, .35))
-sample(c('Iowa State',''), size = 1, prob = c(.61, .39))
+sample(c('Iowa State','Pittsburgh'), size = 1, prob = c(.61, .39))
 sample(c('Xavier','Kennesaw State'), size = 1, prob = c(.61, .39))
 sample(c('Texas A&M','Penn State'), size = 1, prob = c(.60, .40))
 sample(c('Texas','Colgate'), size = 1, prob = c(.91, .09))
 
 #South
-sample(c('Alabama',''), size = 1, prob = c(.98, .02))
+sample(c('Alabama','Texas A&M-Corpus Christi'), size = 1, prob = c(.98, .02))
 sample(c('Maryland','West Virginia'), size = 1, prob = c(.48, .52))
 sample(c('San Diego St','Charleston'), size = 1, prob = c(.68, .32))
 sample(c('Virginia','Furman'), size = 1, prob = c(.73, .27))
@@ -57,7 +57,7 @@ sample(c('Northwestern','UCLA'), size = 1, prob = c(.26, .74))
 #Midwest
 sample(c('Houston','Iowa'), size = 1, prob = c(.82, .18))
 sample(c('Miami','Indiana'), size = 1, prob = c(.47, .53))
-sample(c('','Kennesaw State'), size = 1, prob = c(.72, .28))
+sample(c('Pittsburgh','Kennesaw State'), size = 1, prob = c(.72, .28))
 sample(c('Texas A&M','Texas'), size = 1, prob = c(.39, .61))
 
 #South
@@ -67,11 +67,20 @@ sample(c('Crieghton','Baylor'), size = 1, prob = c(.48, .52))
 sample(c('Utah State','Arizona'), size = 1, prob = c(.42, .58))
 
 #Sweet 16
+sample(c('Alabama','Virginia'), size = 1, prob = c(.74, .26))
+sample(c('Crieghton','Arizona'), size = 1, prob = c(.44, .56))
+sample(c('Purdue','Duke'), size = 1, prob = c(.64, .36))
+sample(c('Providence','Marquette'), size = 1, prob = c(.30, .70))
+sample(c('Iowa','Miami'), size = 1, prob = c(.46, .54))
+sample(c('Pittsburgh','Texas'), size = 1, prob = c(.27, .73))
+sample(c('Kansas','Saint Mary'), size = 1, prob = c(.60, .40))
+sample(c('Gonzaga','UCLA'), size = 1, prob = c(.46, .54))
+
 
 #Elite 8 
 sample(c('Alabama','Crieghton'), size = 1, prob = c(.66, .34))
 sample(c('Purdue','Marquette'), size = 1, prob = c(.51, .49))
-sample(c('Miami',''), size = 1, prob = c(.57, .43))
+sample(c('Miami','Pittsburgh'), size = 1, prob = c(.57, .43))
 sample(c('Kansas','Gonzaga'), size = 1, prob = c(.49, .51))
 
 #Final Four 
