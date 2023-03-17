@@ -2,7 +2,10 @@
 
 # Contents
 * [Synopsis](#Header)
+* [2023 NCAA March Madness Tournament Simulation](#Header)
 * [Conference Realignment In College Football](#Header)
+* [ESPN 100 Basketball Recruiting Database](#Header)
+* [High School XC Nationals](#Header)
 * [Lahman Baseball](#Header)
 * [Marathon Training](#Header)
 * [Nashville Marathon](#Header)
@@ -11,6 +14,7 @@
 * [North American Professional Sports Venues Map](#Header)
 * [Olympic History Data & Statistics](#Header)
 * [United States Sub-4 Milers Database](#Header)
+* [Data Sources & Tools](#Header)
 
 # Synopsis
 
@@ -18,11 +22,59 @@ This repository is a collection of Sports related projects.
 
 <u>*Note*</u>: Some of these projects may have their own repositories (Links will be provided to them).
 
+Back to [Contents](#Header)
+
+# 2023 NCAA March Madness Tournament Simulation
+
+Implemented sample function in R to create a simulation of the 2023 Men's & Women's NCAA March Madness Tournament.
+
+The prediction percentages for the simulation came from the team's power rating in the ESPN tournament challenge website / application.
+
+*<u>Visualizations</u>*
+
+[2023 NCAA March Madness Tournament Predictions](https://public.flourish.studio/story/1853348/)
+
+<u>*Note*</u>: This is for education only. Results from this simulation should not be used for gambling purposes.
+
+Back to [Contents](#Header)
+
 # Conference Realignment In College Football
 
 Collected, cleaned, and analyzed data using Python to see if changing conferences in college football leads to better results or success on the field. 
 
 [Conference Realignment In College Football Repo](https://github.com/LJRollerII/Conference_Realignment_In_College_Football)
+
+Back to [Contents](#Header)
+
+# ESPN 100 Baskeball Recruiting Database
+
+Collected, cleaned, explored and analyzed data from the ESPN 100 Baskeball Recruiting Rankings from 2007 (inaugural year) to 2022. 
+
+Through analysis of the data, we would like to find out:
+
+1. Which schools/teams signed the most recruits?
+2. Which cities produced the most recurits?
+3. Which states produced the most recurits?
+4. What's the average size of a ESPN 100 recruit (Both height and weight)?
+5. What type of high school do most recruits attend?
+6. What postion made up the majority of the recruits?
+7. Random interesting information we may find from analyzing the data.
+
+*<u>Visualizations</u>*
+
+[Top ESPN 100 Basketball Recruiting Class By Year](https://public.flourish.studio/visualisation/12644117/)
+
+Back to [Contents](#Header)
+
+# High School XC Nationals
+
+Explored, analyzed, and visualized data from the Foot Locker and Nike Cross Nationals (NXN) Championship Meets.
+
+*<u>Visualizations</u>*
+
+[Foot Locker XC Champions](https://public.tableau.com/app/profile/lance.roller/viz/FootLockerXCChampions/FootLockerXCChampions?publish=yes)
+
+[Nike Cross Nationals Champions](https://public.tableau.com/app/profile/lance.roller/viz/NikeCrossNationalsChampions/NXNChampions?publish=yes)
 
 Back to [Contents](#Header)
 
@@ -35,6 +87,8 @@ Implemented SQL queries to find answers to questions about Major League Baseball
 Back to [Contents](#Header)
 
 # Marathon Training
+
+Exploring and analyzing the training data of a marathoner via Strava from 2/24/2019 - 12/13/2022.
 
 [Marathon Training Repo](https://github.com/LJRollerII/Marathon_Training)
 
@@ -84,5 +138,29 @@ Explored and analyzed data through Python to learn the history and discover inte
 under four minutes for a mile. 
 
 [United States Sub-4 Milers Database Repo](https://github.com/LJRollerII/United_States_Sub_4_Milers_Database)
+
+Back to [Contents](#Header)
+
+# Data Sources & Tools
+
+**<u>Tools</u>**
+
+Excel, Python, R and SQL  for analysis of data.
+
+Foursih Studio, Power BI and Tableau for data visualizations
+
+**<u>Data Sources</u>**
+
+[ESPN 100 Basketball Recruiting Database](http://www.espn.com/college-sports/basketball/recruiting/playerrankings/_/class/2007/order/true)
+
+[ESPN Men's Tournament Challenge](https://fantasy.espn.com/tournament-challenge-bracket/2023/en/)
+
+[ESPN Women's Tournament Challenge](https://fantasy.espn.com/tournament-challenge-bracket-women/2023/en/)
+
+[Foot Locker XC](https://www.footlockercc.com/)
+
+[Nike Cross Nationals](https://www.runnerspace.com/NXN)
+
+[Sports Stadium Locations](https://www.kaggle.com/datasets/logandonaldson/sports-stadium-locations)
 
 Back to [Contents](#Header)
