@@ -1,7 +1,7 @@
 #First Round
 
 #East
-sample(c('Purdue',''), size = 1, prob = c(1.0, 0.0))
+sample(c('Purdue','Fairleigh Dickinson'), size = 1, prob = c(1.0, 0.0))
 sample(c('Memphis','FAU'), size = 1, prob = c(.52, .48))
 sample(c('Duke','Oral Roberts'), size = 1, prob = c(.62, .38))
 sample(c('Tennessee','Louisiana'), size = 1, prob = c(.78, .22))
@@ -15,7 +15,7 @@ sample(c('Kansas','Howard'), size = 1, prob = c(.98, .02))
 sample(c('Arkansas','Illinois'), size = 1, prob = c(.52, .48))
 sample(c('Saint Mary','VCU'), size = 1, prob = c(.68, .32))
 sample(c('UConn','Iona'), size = 1, prob = c(.84, .16))
-sample(c('TCU',''), size = 1, prob = c(.67, .33))
+sample(c('TCU','Arizona State'), size = 1, prob = c(.67, .33))
 sample(c('Gonzaga','Grand Canyon'), size = 1, prob = c(.90, .10))
 sample(c('Northwestern','Boise State'), size = 1, prob = c(.48, .52))
 sample(c('UCLA','UNC Asheville'), size = 1, prob = c(.95, .05))
