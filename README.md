@@ -14,6 +14,7 @@
 * [North American Professional Sports Venues Map](#Header)
 * [Olympic History Data & Statistics](#Header)
 * [United States Sub-4 Milers Database](#Header)
+* [United States Women Sub-4:30 Milers Database](#Header)
 * [Data Sources & Tools](#Header)
 
 # Synopsis
@@ -141,6 +142,16 @@ under four minutes for a mile.
 
 Back to [Contents](#Header)
 
+# United States Women Sub-4:30 Milers Database
+
+Explored and analyzed data through Python to learn the history and discover interesting trends about Female American runners who have run under four and a half minutes for a mile.
+
+*<u>Note</u>*: Data collected from this project was from 1975 - April 26, 2023.
+
+[US Women Sub-4:30 Milers](https://public.tableau.com/app/profile/lance.roller/viz/USWomenSub-430Milers/USWomenSub-430Milers?publish=yes)
+
+Back to [Contents](#Header)
+
 # Data Sources & Tools
 
 **<u>Tools</u>**
@@ -150,6 +161,8 @@ Excel, Python, R and SQL  for analysis of data.
 Foursih Studio, Power BI and Tableau for data visualizations
 
 **<u>Data Sources</u>**
+
+[Bring Back The Mile](https://bringbackthemile.com/history/sub_4_sub_430)
 
 [ESPN 100 Basketball Recruiting Database](http://www.espn.com/college-sports/basketball/recruiting/playerrankings/_/class/2007/order/true)
 
