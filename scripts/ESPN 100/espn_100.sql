@@ -248,4 +248,72 @@ AND jbc = TRUE
 
 --Answer: Run Code Above in SQL
 
+--How many ESPN 100 recruits are named Michael?--
+
+SELECT COUNT(player) AS players
+FROM espn_100
+WHERE lower(player) ILIKE '%Michael%'
+
+--Answer: There are 12 players named Michael
+
+--Let's see who these players are--
+
+SELECT class, player
+FROM espn_100
+WHERE lower(player) ILIKE '%Michael%'
+
+--Answer: Run Code Above in SQL
+
+--How many ESPN 100 recruits are named Jalen?--
+
+SELECT COUNT(player) AS players
+FROM espn_100
+WHERE lower(player) ILIKE '%Jalen%'
+
+--Answer: There are 21 players named Jalen
+
+--Let's see who these players are--
+
+SELECT class, player
+FROM espn_100
+WHERE lower(player) ILIKE '%Jalen%'
+
+--Answer: Run Code Above in SQL
+
+--How many ESPN 100 recruits are named Anthony?--
+
+SELECT COUNT(player) AS players
+FROM espn_100
+WHERE lower(player) ILIKE '%Anthony%'
+
+--Answer: There are 15 players named Anthony.
+
+--Let's see who these players are--
+
+SELECT class, player
+FROM espn_100
+WHERE lower(player) ILIKE '%Anthony%'
+
+--Answer: Run Code Above in SQL
+
+--What is the most popular First Name?--
+
+SELECT first_name, COUNT(first_name) AS players
+FROM espn_100
+GROUP BY first_name
+ORDER BY players DESC
+
+-- Answer: Jordan and Jalen are tied for the most popular first name at 21.
+-- Note: Brandon was second with 19, followed by Isaiah with 16, and Chris & Josh with 15.
+
+--What is the most popular Last Name?--
+
+SELECT last_name, COUNT(last_name) AS players
+FROM espn_100
+GROUP BY last_name
+ORDER BY players DESC
+
+-- Answer: Johnson is the most popular last name with 35.
+-- Note: Williams was second with 26 and Jones was third with 21.
+
 
