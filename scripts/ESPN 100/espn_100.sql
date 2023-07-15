@@ -786,49 +786,49 @@ AND pos = 'SF'
 
 --Answer: Run Code Above in SQL
 
---Let's look into the Power Foward position--
+--27. Let's look into the Power Foward position--
 SELECT *
 FROM espn_100
 WHERE pos = 'PF'
 
 -- Answer:  Run Code Above in SQL
 
---What is the highest grade an ESPN 100 PF received?--
+--27b. What is the highest grade an ESPN 100 PF received?--
 
 SELECT MAX(grade)
 FROM espn_100
 WHERE pos = 'SG'
 
--- Answer: 
+-- Answer: 98
 
---Which player(s) received this grade?--
+--27c. Which player(s) received this grade?--
 
 SELECT *
 FROM espn_100
-WHERE grade = ''
+WHERE grade = '98'
 AND pos = 'PF'
 
--- Answer: 
+-- Answer: Multiple Players (Run Code Above in SQL)
 
---What is the lowest grade an ESPN 100 PF received?--
+--27d. What is the lowest grade an ESPN 100 PF received?--
 
 SELECT MIN(grade)
 FROM espn_100
-WHERE pos = 'SF'
+WHERE pos = 'PF'
 
--- Answer: 
+-- Answer: 80
 
---Which player(s) received this grade?--
+--27e. Which player(s) received this grade?--
 
 SELECT *
 FROM espn_100
-WHERE grade = ''
+WHERE grade = '80'
 AND pos = 'PF'
 
--- Answer: 
+-- Answer: Justin Tillman, Josh Cunningham, Mamadi Diakite, Trey Patterson, Ben Gregg
 
 
--- Which city has the most ESPN 100 PFs?--
+--27f. Which city has the most ESPN 100 PFs?--
 
 SELECT hometown, COUNT(hometown) AS number_of_players
 FROM espn_100
@@ -836,9 +836,9 @@ WHERE pos = 'PF'
 GROUP BY hometown
 ORDER BY number_of_players DESC
 
--- Answer: has produced the most ESPN 100 PFs with.
+-- Answer: Chicago, IL has produced the most ESPN 100 PFs with.
 
--- Which state has the most ESPN 100 PFs?--
+--27g. Which state has the most ESPN 100 PFs?--
 
 SELECT state, COUNT(state) AS number_of_players
 FROM espn_100
@@ -846,9 +846,9 @@ WHERE pos = 'PF'
 GROUP BY state
 ORDER BY number_of_players DESC
 
--- Answer: has produced the most ESPN 100 PF with.
+-- Answer: Florida has produced the most ESPN 100 PF with 33.
 
---Which high school has produced the most ESPN 100 Power Forwards?--
+--27h. Which high school has produced the most ESPN 100 Power Forwards?--
 
 SELECT high_school, COUNT(high_school) AS number_of_players
 FROM espn_100
@@ -856,9 +856,9 @@ WHERE pos = 'PF'
 GROUP BY high_school
 ORDER BY number_of_players DESC
 
--- Answer: has produced the most ESPN 100 PF with.
+-- Answer: Brewster Academy has produced the most ESPN 100 PF with 11.
 
---What college has the most ESPN PFs--
+--27i. What college has the most ESPN PFs?--
 
 SELECT school, COUNT(school) AS college_commits
 FROM espn_100
@@ -866,18 +866,18 @@ WHERE pos = 'PF'
 GROUP BY school
 ORDER BY college_commits DESC
 
--- Answer: has the most ESPN 100 PFs with .
+-- Answer: Kentucky has the most ESPN 100 PFs with 18.
 
---How many PFs were McDonald's All-Americans?--
+--27j. How many PFs were McDonald's All-Americans?--
 
 SELECT COUNT(*)
 FROM espn_100
 WHERE mcdonalds_aa = TRUE
 AND pos = 'PF'
 
--- Answer: McDonald's All-Americans were PFs.
+-- Answer: 93 McDonald's All-Americans were PFs.
 
---Let's see who these players are--
+--27k. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -886,16 +886,16 @@ AND pos = 'PF'
 
 --Answer: Run Code Above in SQL
 
---How many PFs played in the Jordan Brand Classic?--
+--27l. How many PFs played in the Jordan Brand Classic?--
 
 SELECT COUNT(*)
 FROM espn_100
 WHERE jbc = TRUE
 AND pos = 'PF'
 
--- Answer: Jordan Brand Classic Participants were PFs.
+-- Answer: 81 Jordan Brand Classic Participants were PFs.
 
---Let's see who these players are--
+--27m. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -905,7 +905,7 @@ AND pos = 'PF'
 --Answer: Run Code Above in SQL
 
 
---How many PFs were a McDonald's All-American and Jordan Brand Classic Participant?--
+--27n. How many PFs were a McDonald's All-American or Jordan Brand Classic Participant?--
 
 SELECT COUNT(*)
 FROM espn_100
@@ -913,14 +913,34 @@ WHERE mcdonalds_aa = TRUE
 OR jbc = TRUE
 AND pos = 'PF'
 
--- Answer: players that participated in either the McDonald's All-American Game or Jordan Brand Classic were PFs.
+-- Answer: 406 players that participated in either the McDonald's All-American Game or Jordan Brand Classic were PFs.
 
---Let's see who these players are--
+--27o. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
 WHERE mcdonalds_aa = TRUE
 OR jbc = TRUE
+AND pos = 'PF'
+
+--Answer: Run Code Above in SQL
+
+--27p. How many PFs were both a McDonald's All-American an Jordan Brand Classic Participant?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND jbc = TRUE
+AND pos = 'PF'
+
+-- Answer: 59 players that participated in both the McDonald's All-American Game and Jordan Brand Classic were PFs.
+
+--27q. Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND jbc = TRUE
 AND pos = 'PF'
 
 --Answer: Run Code Above in SQL
