@@ -946,49 +946,49 @@ AND pos = 'PF'
 --Answer: Run Code Above in SQL
 
 
---Let's look into the Center position--
+--28. Let's look into the Center position--
 SELECT *
 FROM espn_100
 WHERE pos = 'C'
 
 -- Answer:  Run Code Above in SQL
 
---What is the highest grade an ESPN 100 Center received?--
+--28b. What is the highest grade an ESPN 100 Center received?--
 
 SELECT MAX(grade)
 FROM espn_100
 WHERE pos = 'C'
 
--- Answer: 
+-- Answer: 99
 
---Which player(s) received this grade?--
+--28c. Which player(s) received this grade?--
 
 SELECT *
 FROM espn_100
-WHERE grade = ''
+WHERE grade = '99'
 AND pos = 'C'
 
--- Answer: 
+-- Answer: Kevin Love
 
---What is the lowest grade an ESPN 100 Center received?--
+--28d. What is the lowest grade an ESPN 100 Center received?--
 
 SELECT MIN(grade)
 FROM espn_100
 WHERE pos = 'C'
 
--- Answer: 
+-- Answer: 80
 
---Which player(s) received this grade?--
+--28e. Which player(s) received this grade?--
 
 SELECT *
 FROM espn_100
-WHERE grade = ''
+WHERE grade = '80'
 AND pos = 'C'
 
--- Answer: 
+-- Answer: Payton Dastrup, Franck Kepnang, Mac Etienne
 
 
--- Which city has the most ESPN 100 Centers?--
+--28f. Which city has the most ESPN 100 Centers?--
 
 SELECT hometown, COUNT(hometown) AS number_of_players
 FROM espn_100
@@ -996,9 +996,9 @@ WHERE pos = 'C'
 GROUP BY hometown
 ORDER BY number_of_players DESC
 
--- Answer: has produced the most ESPN 100 Centers with.
+-- Answer: Philadelphia, PA has produced the most ESPN 100 Centers with 8.
 
---6. Which state has the most ESPN 100 Centers?--
+--28g. Which state has the most ESPN 100 Centers?--
 
 SELECT state, COUNT(state) AS number_of_players
 FROM espn_100
@@ -1006,9 +1006,9 @@ WHERE pos = 'C'
 GROUP BY state
 ORDER BY number_of_players DESC
 
--- Answer: has produced the most ESPN 100 Centers with.
+-- Answer: Texas has produced the most ESPN 100 Centers with 22.
 
---Which high school has produced the most ESPN 100 Centers?--
+--28h. Which high school has produced the most ESPN 100 Centers?--
 
 SELECT high_school, COUNT(high_school) AS number_of_players
 FROM espn_100
@@ -1016,9 +1016,9 @@ WHERE pos = 'C'
 GROUP BY high_school
 ORDER BY number_of_players DESC
 
--- Answer: has produced the most ESPN 100 SG with.
+-- Answer: Montverde Academy has produced the most ESPN 100 Centers with 11.
 
---10. What college has the most ESPN Centers--
+--28i. What college has the most ESPN Centers--
 
 SELECT school, COUNT(school) AS college_commits
 FROM espn_100
@@ -1026,18 +1026,18 @@ WHERE pos = 'C'
 GROUP BY school
 ORDER BY college_commits DESC
 
--- Answer: has the most ESPN 100 SGs with .
+-- Answer: Kentucky has the most ESPN 100 Centers with 12.
 
---How many Centers were McDonald's All-Americans?--
+--28j. How many Centers were McDonald's All-Americans?--
 
 SELECT COUNT(*)
 FROM espn_100
 WHERE mcdonalds_aa = TRUE
 AND pos = 'PG'
 
--- Answer: McDonald's All-Americans were Centers.
+-- Answer: 75 McDonald's All-Americans were Centers.
 
---Let's see who these players are--
+--28k. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -1046,16 +1046,16 @@ AND pos = 'C'
 
 --Answer: Run Code Above in SQL
 
---How many Centers played in the Jordan Brand Classic?--
+--28l. How many Centers played in the Jordan Brand Classic?--
 
 SELECT COUNT(*)
 FROM espn_100
 WHERE jbc = TRUE
 AND pos = 'C'
 
--- Answer: Jordan Brand Classic Participants were Centers.
+-- Answer: 56 Jordan Brand Classic Participants were Centers.
 
---Let's see who these players are--
+--28m. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -1065,7 +1065,7 @@ AND pos = 'C'
 --Answer: Run Code Above in SQL
 
 
---How many Centers were a McDonald's All-American and Jordan Brand Classic Participant?--
+--28n. How many Centers were a McDonald's All-American or Jordan Brand Classic Participant?--
 
 SELECT COUNT(*)
 FROM espn_100
@@ -1073,9 +1073,9 @@ WHERE mcdonalds_aa = TRUE
 OR jbc = TRUE
 AND pos = 'C'
 
--- Answer: players that participated in either the McDonald's All-American Game or Jordan Brand Classic were Centers.
+-- Answer: 399 players that participated in either the McDonald's All-American Game or Jordan Brand Classic were Centers.
 
---Let's see who these players are--
+--28o. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -1086,5 +1086,23 @@ AND pos = 'C'
 --Answer: Run Code Above in SQL
 
 
+--28p. How many Centers were both a McDonald's All-American and Jordan Brand Classic Participant?--
 
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND jbc = TRUE
+AND pos = 'C'
+
+-- Answer: 41 players that participated in both the McDonald's All-American Game and Jordan Brand Classic were Centers.
+
+--28q. Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND jbc = TRUE
+AND pos = 'C'
+
+--Answer: Run Code Above in SQL
 
