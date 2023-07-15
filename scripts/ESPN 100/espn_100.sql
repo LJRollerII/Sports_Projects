@@ -453,7 +453,7 @@ WHERE mcdonalds_aa = TRUE
 AND jbc = TRUE
 AND pos = 'PG'
 
--- Answer: 52 players that participated in both the McDonald's All-American Game or Jordan Brand Classic were PGs.
+-- Answer: 52 players that participated in both the McDonald's All-American Game and Jordan Brand Classic were PGs.
 
 
 --24p. Let's see who these players are--
@@ -474,42 +474,42 @@ WHERE pos = 'SG'
 
 -- Answer:  Run Code Above in SQL
 
---What is the highest grade an ESPN 100 SG received?--
+--25b. What is the highest grade an ESPN 100 SG received?--
 
 SELECT MAX(grade)
 FROM espn_100
 WHERE pos = 'SG'
 
--- Answer: 
+-- Answer: 98
 
---Which player(s) received this grade?--
+--25c. Which player(s) received this grade?--
 
 SELECT *
 FROM espn_100
-WHERE grade = ''
+WHERE grade = '98'
 AND pos = 'SG'
 
--- Answer: 
+-- Answer: Multiple Players (Run Code Above in SQL)
 
---What is the lowest grade an ESPN 100 SG received?--
+--25d. What is the lowest grade an ESPN 100 SG received?--
 
 SELECT MIN(grade)
 FROM espn_100
 WHERE pos = 'SG'
 
--- Answer: 
+-- Answer: 80
 
---Which player(s) received this grade?--
+--25e. Which player(s) received this grade?--
 
 SELECT *
 FROM espn_100
-WHERE grade = ''
+WHERE grade = '80'
 AND pos = 'SG'
 
--- Answer: 
+-- Answer: Elijah Stewart
 
 
--- Which city has the most ESPN 100 SGs?--
+--25f. Which city has the most ESPN 100 SGs?--
 
 SELECT hometown, COUNT(hometown) AS number_of_players
 FROM espn_100
@@ -517,9 +517,9 @@ WHERE pos = 'SG'
 GROUP BY hometown
 ORDER BY number_of_players DESC
 
--- Answer: has produced the most ESPN 100 SGs with.
+-- Answer: Chicago, IL has produced the most ESPN 100 SGs with 10.
 
---. Which state has the most ESPN 100 SGs?--
+--25g. Which state has the most ESPN 100 SGs?--
 
 SELECT state, COUNT(state) AS number_of_players
 FROM espn_100
@@ -527,9 +527,9 @@ WHERE pos = 'SG'
 GROUP BY state
 ORDER BY number_of_players DESC
 
--- Answer: has produced the most ESPN 100 SG with.
+-- Answer: California has produced the most ESPN 100 SG with 36.
 
---Which high school has produced the most ESPN 100 Shooting Guards?--
+--25h. Which high school has produced the most ESPN 100 Shooting Guards?--
 
 SELECT high_school, COUNT(high_school) AS number_of_players
 FROM espn_100
@@ -537,9 +537,9 @@ WHERE pos = 'SG'
 GROUP BY high_school
 ORDER BY number_of_players DESC
 
--- Answer: has produced the most ESPN 100 SG with.
+-- Answer: Oak Hill Academy has produced the most ESPN 100 SG with 11.
 
---. What college has the most ESPN SGs--
+--25i. What college has the most ESPN SGs--
 
 SELECT school, COUNT(school) AS college_commits
 FROM espn_100
@@ -547,18 +547,18 @@ WHERE pos = 'SG'
 GROUP BY school
 ORDER BY college_commits DESC
 
--- Answer: has the most ESPN 100 SGs with .
+-- Answer: Duke has the most ESPN 100 SGs with 14.
 
---How many SGs were McDonald's All-Americans?--
+--25j. How many SGs were McDonald's All-Americans?--
 
 SELECT COUNT(*)
 FROM espn_100
 WHERE mcdonalds_aa = TRUE
 AND pos = 'SG'
 
--- Answer: McDonald's All-Americans were SGs.
+-- Answer: 84 McDonald's All-Americans were SGs.
 
---Let's see who these players are--
+--25k. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -567,16 +567,16 @@ AND pos = 'SG'
 
 --Answer: Run Code Above in SQL
 
---How many SGs played in the Jordan Brand Classic?--
+--25l. How many SGs played in the Jordan Brand Classic?--
 
 SELECT COUNT(*)
 FROM espn_100
 WHERE jbc = TRUE
 AND pos = 'SG'
 
--- Answer: Jordan Brand Classic Participants were SGs.
+-- Answer: 90 Jordan Brand Classic Participants were SGs.
 
---Let's see who these players are--
+--25m. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -586,7 +586,7 @@ AND pos = 'SG'
 --Answer: Run Code Above in SQL
 
 
---How many SGs were a McDonald's All-American and Jordan Brand Classic Participant?--
+--25n. How many SGs were a McDonald's All-American or Jordan Brand Classic Participant?--
 
 SELECT COUNT(*)
 FROM espn_100
@@ -594,14 +594,34 @@ WHERE mcdonalds_aa = TRUE
 OR jbc = TRUE
 AND pos = 'SG'
 
--- Answer: players that participated in either the McDonald's All-American Game or Jordan Brand Classic were SGs.
+-- Answer: 414 players that participated in either the McDonald's All-American Game or Jordan Brand Classic were SGs.
 
---Let's see who these players are--
+--25o. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
 WHERE mcdonalds_aa = TRUE
 OR jbc = TRUE
+AND pos = 'SG'
+
+--Answer: Run Code Above in SQL
+
+--25p. How many SGs were a McDonald's All-American or Jordan Brand Classic Participant?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND jbc = TRUE
+AND pos = 'SG'
+
+-- Answer: 60 players that participated in both the McDonald's All-American Game and Jordan Brand Classic were SGs.
+
+--25q. Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND jbc = TRUE
 AND pos = 'SG'
 
 --Answer: Run Code Above in SQL
