@@ -149,14 +149,14 @@ ORDER BY number_of_players DESC
 
 
 
---Let's find all the #1 recruits--
+--13. Let's find all the #1 recruits--
 SELECT class, player, pos, hometown, high_school, height, weight, grade, school, mcdonalds_aa, jbc
 FROM espn_100
 WHERE Rank = '1'
 
 --Answer: Run Code Above in SQL
 
---Let's find all the unsigned and uncommited players--
+--14. Let's find all the unsigned and uncommited players--
 
 --How many players are unsigned and/or uncommitted?--
 
@@ -166,7 +166,7 @@ WHERE school = 'Unsigned/Uncommitted'
 
 --Answer: There are 42 players that were unsigned and/or uncommitted.
 
---Let's see who these players are--
+--14b. Let's see who these players are--
 
 SELECT *
 FROM espn_100
@@ -175,7 +175,7 @@ WHERE school = 'Unsigned/Uncommitted'
 --Answer: Run Code Above in SQL
 
 
---Let's Find All the players that were McDonald's All-Americans--
+--15. Let's Find All the players that were McDonald's All-Americans--
 
 --First the total number of players--
 
@@ -185,7 +185,7 @@ WHERE mcdonalds_aa = TRUE
 
 -- Answer: There are 384 McDonald's All-Americans.
 
---Let's see who these players are--
+--15b. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -194,7 +194,7 @@ WHERE mcdonalds_aa = TRUE
 --Answer: Run Code Above in SQL
 
 
---Let's Find All the players that were Jordan Brand Classic Participants--
+--16. Let's Find All the players that were Jordan Brand Classic Participants--
 
 SELECT COUNT(*)
 FROM espn_100
@@ -202,7 +202,7 @@ WHERE jbc = TRUE
 
 -- Answer: There are 377 Jordan Brand Classic Participants.
 
---Let's see who these players are--
+--16b.Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -211,7 +211,7 @@ WHERE jbc = TRUE
 --Answer: Run Code Above in SQL
 
 
---Let's Find All the players that were either McDonald's All-Americans or Jordan Brand Classic Participants--
+--17. Let's Find All the players that were either McDonald's All-Americans or Jordan Brand Classic Participants--
 
 SELECT COUNT(*)
 FROM espn_100
@@ -220,7 +220,7 @@ OR jbc = TRUE
 
 -- Answer: There are 498 players that particpated in either the McDonald's All-American Game or Jordan Brand Classic.
 
---Let's see who these players are--
+--17b. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -230,7 +230,7 @@ OR jbc = TRUE
 --Answer: Run Code Above in SQL
 
 
---Let's Find All the players that were McDonald's All-Americans and Jordan Brand Classic Participants--
+--18. Let's Find All the players that were McDonald's All-Americans and Jordan Brand Classic Participants--
 
 SELECT COUNT(*)
 FROM espn_100
@@ -239,7 +239,7 @@ AND jbc = TRUE
 
 -- Answer: There are 263 players that were both McDonald's All-American and Jordan Brand Classic participants.
 
---Let's see who these players are--
+--18b. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -248,7 +248,7 @@ AND jbc = TRUE
 
 --Answer: Run Code Above in SQL
 
---How many ESPN 100 recruits are named Michael?--
+--19. How many ESPN 100 recruits are named Michael?--
 
 SELECT COUNT(player) AS players
 FROM espn_100
@@ -256,7 +256,7 @@ WHERE lower(player) ILIKE '%Michael%'
 
 --Answer: There are 12 players named Michael
 
---Let's see who these players are--
+--19b. Let's see who these players are--
 
 SELECT class, player
 FROM espn_100
@@ -264,7 +264,7 @@ WHERE lower(player) ILIKE '%Michael%'
 
 --Answer: Run Code Above in SQL
 
---How many ESPN 100 recruits are named Jalen?--
+--20. How many ESPN 100 recruits are named Jalen?--
 
 SELECT COUNT(player) AS players
 FROM espn_100
@@ -272,7 +272,7 @@ WHERE lower(player) ILIKE '%Jalen%'
 
 --Answer: There are 21 players named Jalen
 
---Let's see who these players are--
+--20b. Let's see who these players are--
 
 SELECT class, player
 FROM espn_100
@@ -280,7 +280,7 @@ WHERE lower(player) ILIKE '%Jalen%'
 
 --Answer: Run Code Above in SQL
 
---How many ESPN 100 recruits are named Anthony?--
+--21. How many ESPN 100 recruits are named Anthony?--
 
 SELECT COUNT(player) AS players
 FROM espn_100
@@ -288,7 +288,7 @@ WHERE lower(player) ILIKE '%Anthony%'
 
 --Answer: There are 15 players named Anthony.
 
---Let's see who these players are--
+--21b. Let's see who these players are--
 
 SELECT class, player
 FROM espn_100
@@ -296,7 +296,7 @@ WHERE lower(player) ILIKE '%Anthony%'
 
 --Answer: Run Code Above in SQL
 
---What is the most popular First Name?--
+--22. What is the most popular First Name?--
 
 SELECT first_name, COUNT(first_name) AS players
 FROM espn_100
@@ -306,7 +306,7 @@ ORDER BY players DESC
 -- Answer: Jordan and Jalen are tied for the most popular first name at 21.
 -- Note: Brandon was second with 19, followed by Isaiah with 16, and Chris & Josh with 15.
 
---What is the most popular Last Name?--
+--23. What is the most popular Last Name?--
 
 SELECT last_name, COUNT(last_name) AS players
 FROM espn_100
@@ -315,5 +315,717 @@ ORDER BY players DESC
 
 -- Answer: Johnson is the most popular last name with 35.
 -- Note: Williams was second with 26 and Jones was third with 21.
+
+--24. Let's look into the Point Guard position--
+SELECT *
+FROM espn_100
+WHERE pos = 'PG'
+
+-- Answer:  Run Code Above in SQL
+
+--24b. What is the highest grade an ESPN 100 PG received?--
+
+SELECT MAX(grade)
+FROM espn_100
+WHERE pos = 'PG'
+
+-- Answer: 99
+
+--24c. Which player(s) received this grade?--
+
+SELECT *
+FROM espn_100
+WHERE grade = '99'
+AND pos = 'PG'
+
+-- Answer: Brandon Jennings
+
+--24d. What is the lowsest grade an ESPN 100 PG received?--
+
+SELECT MIN(grade)
+FROM espn_100
+WHERE pos = 'PG'
+
+-- Answer: 80
+
+--24e. Which player(s) received this grade?--
+
+SELECT *
+FROM espn_100
+WHERE grade = '80'
+AND pos = 'PG'
+
+-- Answer: Riley LaChance
+
+
+--24f. Which city has the most ESPN 100 PGs?--
+
+SELECT hometown, COUNT(hometown) AS number_of_players
+FROM espn_100
+WHERE pos = 'PG'
+GROUP BY hometown
+ORDER BY number_of_players DESC
+
+-- Answer:Detroit, MI has produced the most ESPN 100 PGs with 7.
+
+--24g. Which state has the most ESPN 100 PGs?--
+
+SELECT state, COUNT(state) AS number_of_players
+FROM espn_100
+WHERE pos = 'PG'
+GROUP BY state
+ORDER BY number_of_players DESC
+
+-- Answer: California and Texas produced the most ESPN 100 PG with 26 each.
+
+--24h. Which high school has produced the most ESPN 100 Point Guards?--
+
+SELECT high_school, COUNT(high_school) AS number_of_players
+FROM espn_100
+WHERE pos = 'PG'
+GROUP BY high_school
+ORDER BY number_of_players DESC
+
+-- Answer: Oak Hill & Montverde Academy produced the most ESPN 100 PG with 8 each.
+
+--24i. What college has the most ESPN PGs--
+
+SELECT school, COUNT(school) AS college_commits
+FROM espn_100
+WHERE pos = 'PG'
+GROUP BY school
+ORDER BY college_commits DESC
+
+-- Answer: Kentucky has the most ESPN 100 PGs with 14 .
+
+--24j. How many PGs were McDonald's All-Americans?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND pos = 'PG'
+
+-- Answer:75 McDonald's All-Americans were PGs.
+
+--24k. Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND pos = 'PG'
+
+--Answer: Run Code Above in SQL
+
+--24l. How many PGs played in the Jordan Brand Classic?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE jbc = TRUE
+AND pos = 'PG'
+
+-- Answer: 71 Jordan Brand Classic Participants were PGs.
+
+--24m. Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE jbc = TRUE
+AND pos = 'PG'
+
+--Answer: Run Code Above in SQL
+
+
+--24n. How many PGs were a McDonald's All-American or Jordan Brand Classic Participant?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+OR jbc = TRUE
+AND pos = 'PG'
+
+-- Answer: 403 players that participated in either the McDonald's All-American Game or Jordan Brand Classic were PGs.
+
+--24o. How many PGs were a McDonald's All-American and Jordan Brand Classic Participant?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND jbc = TRUE
+AND pos = 'PG'
+
+-- Answer: 52 players that participated in both the McDonald's All-American Game or Jordan Brand Classic were PGs.
+
+
+--24p. Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+OR jbc = TRUE
+AND pos = 'PG'
+
+--Answer: Run Code Above in SQL
+
+
+--25. Let's look into the Shooting Guard position--
+SELECT *
+FROM espn_100
+WHERE pos = 'SG'
+
+-- Answer:  Run Code Above in SQL
+
+--What is the highest grade an ESPN 100 SG received?--
+
+SELECT MAX(grade)
+FROM espn_100
+WHERE pos = 'SG'
+
+-- Answer: 
+
+--Which player(s) received this grade?--
+
+SELECT *
+FROM espn_100
+WHERE grade = ''
+AND pos = 'SG'
+
+-- Answer: 
+
+--What is the lowest grade an ESPN 100 SG received?--
+
+SELECT MIN(grade)
+FROM espn_100
+WHERE pos = 'SG'
+
+-- Answer: 
+
+--Which player(s) received this grade?--
+
+SELECT *
+FROM espn_100
+WHERE grade = ''
+AND pos = 'SG'
+
+-- Answer: 
+
+
+-- Which city has the most ESPN 100 SGs?--
+
+SELECT hometown, COUNT(hometown) AS number_of_players
+FROM espn_100
+WHERE pos = 'SG'
+GROUP BY hometown
+ORDER BY number_of_players DESC
+
+-- Answer: has produced the most ESPN 100 SGs with.
+
+--. Which state has the most ESPN 100 SGs?--
+
+SELECT state, COUNT(state) AS number_of_players
+FROM espn_100
+WHERE pos = 'SG'
+GROUP BY state
+ORDER BY number_of_players DESC
+
+-- Answer: has produced the most ESPN 100 SG with.
+
+--Which high school has produced the most ESPN 100 Shooting Guards?--
+
+SELECT high_school, COUNT(high_school) AS number_of_players
+FROM espn_100
+WHERE pos = 'SG'
+GROUP BY high_school
+ORDER BY number_of_players DESC
+
+-- Answer: has produced the most ESPN 100 SG with.
+
+--. What college has the most ESPN SGs--
+
+SELECT school, COUNT(school) AS college_commits
+FROM espn_100
+WHERE pos = 'SG'
+GROUP BY school
+ORDER BY college_commits DESC
+
+-- Answer: has the most ESPN 100 SGs with .
+
+--How many SGs were McDonald's All-Americans?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND pos = 'SG'
+
+-- Answer: McDonald's All-Americans were SGs.
+
+--Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND pos = 'SG'
+
+--Answer: Run Code Above in SQL
+
+--How many SGs played in the Jordan Brand Classic?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE jbc = TRUE
+AND pos = 'SG'
+
+-- Answer: Jordan Brand Classic Participants were SGs.
+
+--Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE jbc = TRUE
+AND pos = 'SG'
+
+--Answer: Run Code Above in SQL
+
+
+--How many SGs were a McDonald's All-American and Jordan Brand Classic Participant?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+OR jbc = TRUE
+AND pos = 'SG'
+
+-- Answer: players that participated in either the McDonald's All-American Game or Jordan Brand Classic were SGs.
+
+--Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+OR jbc = TRUE
+AND pos = 'SG'
+
+--Answer: Run Code Above in SQL
+
+
+--Let's look into the Small Forward position--
+SELECT *
+FROM espn_100
+WHERE pos = 'SF'
+
+-- Answer:  Run Code Above in SQL
+
+--What is the highest grade an ESPN 100 SF received?--
+
+SELECT MAX(grade)
+FROM espn_100
+WHERE pos = 'SF'
+
+-- Answer: 
+
+--Which player(s) received this grade?--
+
+SELECT *
+FROM espn_100
+WHERE grade = ''
+AND pos = 'SF'
+
+-- Answer: 
+
+--What is the lowest grade an ESPN 100 SF received?--
+
+SELECT MIN(grade)
+FROM espn_100
+WHERE pos = 'SF'
+
+-- Answer: 
+
+--Which player(s) received this grade?--
+
+SELECT *
+FROM espn_100
+WHERE grade = ''
+AND pos = 'SF'
+
+-- Answer: 
+
+
+-- Which city has the most ESPN 100 SFs?--
+
+SELECT hometown, COUNT(hometown) AS number_of_players
+FROM espn_100
+WHERE pos = 'SF'
+GROUP BY hometown
+ORDER BY number_of_players DESC
+
+-- Answer: has produced the most ESPN 100 SFs with.
+
+--6. Which state has the most ESPN 100 SFs?--
+
+SELECT state, COUNT(state) AS number_of_players
+FROM espn_100
+WHERE pos = 'SF'
+GROUP BY state
+ORDER BY number_of_players DESC
+
+-- Answer: has produced the most ESPN 100 SF with.
+
+--Which high school has produced the most ESPN 100 Small Forwards?--
+
+SELECT high_school, COUNT(high_school) AS number_of_players
+FROM espn_100
+WHERE pos = 'SF'
+GROUP BY high_school
+ORDER BY number_of_players DESC
+
+-- Answer: has produced the most ESPN 100 SF with.
+
+--What college has the most ESPN SFs--
+
+SELECT school, COUNT(school) AS college_commits
+FROM espn_100
+WHERE pos = 'SF'
+GROUP BY school
+ORDER BY college_commits DESC
+
+-- Answer: has the most ESPN 100 SFs with .
+
+--How many SFs were McDonald's All-Americans?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND pos = 'SF'
+
+-- Answer: McDonald's All-Americans were SFs.
+
+--Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND pos = 'SF'
+
+--Answer: Run Code Above in SQL
+
+--How many SFs played in the Jordan Brand Classic?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE jbc = TRUE
+AND pos = 'SF'
+
+-- Answer: Jordan Brand Classic Participants were SFs.
+
+--Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE jbc = TRUE
+AND pos = 'SF'
+
+--Answer: Run Code Above in SQL
+
+
+--How many SFs were a McDonald's All-American and Jordan Brand Classic Participant?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+OR jbc = TRUE
+AND pos = 'SF'
+
+-- Answer: players that participated in either the McDonald's All-American Game or Jordan Brand Classic were SFs.
+
+--Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+OR jbc = TRUE
+AND pos = 'SF'
+
+--Answer: Run Code Above in SQL
+
+
+--Let's look into the Power Foward position--
+SELECT *
+FROM espn_100
+WHERE pos = 'PF'
+
+-- Answer:  Run Code Above in SQL
+
+--What is the highest grade an ESPN 100 PF received?--
+
+SELECT MAX(grade)
+FROM espn_100
+WHERE pos = 'SG'
+
+-- Answer: 
+
+--Which player(s) received this grade?--
+
+SELECT *
+FROM espn_100
+WHERE grade = ''
+AND pos = 'PF'
+
+-- Answer: 
+
+--What is the lowest grade an ESPN 100 PF received?--
+
+SELECT MIN(grade)
+FROM espn_100
+WHERE pos = 'SF'
+
+-- Answer: 
+
+--Which player(s) received this grade?--
+
+SELECT *
+FROM espn_100
+WHERE grade = ''
+AND pos = 'PF'
+
+-- Answer: 
+
+
+-- Which city has the most ESPN 100 PFs?--
+
+SELECT hometown, COUNT(hometown) AS number_of_players
+FROM espn_100
+WHERE pos = 'PF'
+GROUP BY hometown
+ORDER BY number_of_players DESC
+
+-- Answer: has produced the most ESPN 100 PFs with.
+
+-- Which state has the most ESPN 100 PFs?--
+
+SELECT state, COUNT(state) AS number_of_players
+FROM espn_100
+WHERE pos = 'PF'
+GROUP BY state
+ORDER BY number_of_players DESC
+
+-- Answer: has produced the most ESPN 100 PF with.
+
+--Which high school has produced the most ESPN 100 Power Forwards?--
+
+SELECT high_school, COUNT(high_school) AS number_of_players
+FROM espn_100
+WHERE pos = 'PF'
+GROUP BY high_school
+ORDER BY number_of_players DESC
+
+-- Answer: has produced the most ESPN 100 PF with.
+
+--What college has the most ESPN PFs--
+
+SELECT school, COUNT(school) AS college_commits
+FROM espn_100
+WHERE pos = 'PF'
+GROUP BY school
+ORDER BY college_commits DESC
+
+-- Answer: has the most ESPN 100 PFs with .
+
+--How many PFs were McDonald's All-Americans?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND pos = 'PF'
+
+-- Answer: McDonald's All-Americans were PFs.
+
+--Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND pos = 'PF'
+
+--Answer: Run Code Above in SQL
+
+--How many PFs played in the Jordan Brand Classic?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE jbc = TRUE
+AND pos = 'PF'
+
+-- Answer: Jordan Brand Classic Participants were PFs.
+
+--Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE jbc = TRUE
+AND pos = 'PF'
+
+--Answer: Run Code Above in SQL
+
+
+--How many PFs were a McDonald's All-American and Jordan Brand Classic Participant?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+OR jbc = TRUE
+AND pos = 'PF'
+
+-- Answer: players that participated in either the McDonald's All-American Game or Jordan Brand Classic were PFs.
+
+--Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+OR jbc = TRUE
+AND pos = 'PF'
+
+--Answer: Run Code Above in SQL
+
+
+--Let's look into the Center position--
+SELECT *
+FROM espn_100
+WHERE pos = 'C'
+
+-- Answer:  Run Code Above in SQL
+
+--What is the highest grade an ESPN 100 Center received?--
+
+SELECT MAX(grade)
+FROM espn_100
+WHERE pos = 'C'
+
+-- Answer: 
+
+--Which player(s) received this grade?--
+
+SELECT *
+FROM espn_100
+WHERE grade = ''
+AND pos = 'C'
+
+-- Answer: 
+
+--What is the lowest grade an ESPN 100 Center received?--
+
+SELECT MIN(grade)
+FROM espn_100
+WHERE pos = 'C'
+
+-- Answer: 
+
+--Which player(s) received this grade?--
+
+SELECT *
+FROM espn_100
+WHERE grade = ''
+AND pos = 'C'
+
+-- Answer: 
+
+
+-- Which city has the most ESPN 100 Centers?--
+
+SELECT hometown, COUNT(hometown) AS number_of_players
+FROM espn_100
+WHERE pos = 'C'
+GROUP BY hometown
+ORDER BY number_of_players DESC
+
+-- Answer: has produced the most ESPN 100 Centers with.
+
+--6. Which state has the most ESPN 100 Centers?--
+
+SELECT state, COUNT(state) AS number_of_players
+FROM espn_100
+WHERE pos = 'C'
+GROUP BY state
+ORDER BY number_of_players DESC
+
+-- Answer: has produced the most ESPN 100 Centers with.
+
+--Which high school has produced the most ESPN 100 Centers?--
+
+SELECT high_school, COUNT(high_school) AS number_of_players
+FROM espn_100
+WHERE pos = 'C'
+GROUP BY high_school
+ORDER BY number_of_players DESC
+
+-- Answer: has produced the most ESPN 100 SG with.
+
+--10. What college has the most ESPN Centers--
+
+SELECT school, COUNT(school) AS college_commits
+FROM espn_100
+WHERE pos = 'C'
+GROUP BY school
+ORDER BY college_commits DESC
+
+-- Answer: has the most ESPN 100 SGs with .
+
+--How many Centers were McDonald's All-Americans?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND pos = 'PG'
+
+-- Answer: McDonald's All-Americans were Centers.
+
+--Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND pos = 'C'
+
+--Answer: Run Code Above in SQL
+
+--How many Centers played in the Jordan Brand Classic?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE jbc = TRUE
+AND pos = 'C'
+
+-- Answer: Jordan Brand Classic Participants were Centers.
+
+--Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE jbc = TRUE
+AND pos = 'C'
+
+--Answer: Run Code Above in SQL
+
+
+--How many Centers were a McDonald's All-American and Jordan Brand Classic Participant?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+OR jbc = TRUE
+AND pos = 'C'
+
+-- Answer: players that participated in either the McDonald's All-American Game or Jordan Brand Classic were Centers.
+
+--Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+OR jbc = TRUE
+AND pos = 'C'
+
+--Answer: Run Code Above in SQL
+
+
 
 
