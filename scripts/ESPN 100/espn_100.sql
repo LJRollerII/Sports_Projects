@@ -627,49 +627,49 @@ AND pos = 'SG'
 --Answer: Run Code Above in SQL
 
 
---Let's look into the Small Forward position--
+--26. Let's look into the Small Forward position--
 SELECT *
 FROM espn_100
 WHERE pos = 'SF'
 
 -- Answer:  Run Code Above in SQL
 
---What is the highest grade an ESPN 100 SF received?--
+--26b. What is the highest grade an ESPN 100 SF received?--
 
 SELECT MAX(grade)
 FROM espn_100
 WHERE pos = 'SF'
 
--- Answer: 
+-- Answer: 98
 
---Which player(s) received this grade?--
+--26c. Which player(s) received this grade?--
 
 SELECT *
 FROM espn_100
-WHERE grade = ''
+WHERE grade = '98'
 AND pos = 'SF'
 
--- Answer: 
+-- Answer: Kyle Singler, Jordan Hamilton, Harrison Barnes, Michael Gilchrist, Shabazz Muhammad
 
---What is the lowest grade an ESPN 100 SF received?--
+--26d. What is the lowest grade an ESPN 100 SF received?--
 
 SELECT MIN(grade)
 FROM espn_100
 WHERE pos = 'SF'
 
--- Answer: 
+-- Answer: 80
 
---Which player(s) received this grade?--
+--26e. Which player(s) received this grade?--
 
 SELECT *
 FROM espn_100
-WHERE grade = ''
+WHERE grade = '80'
 AND pos = 'SF'
 
--- Answer: 
+-- Answer: Jalen Bridges, Alex Fudge, Jordan Nesbitt
 
 
--- Which city has the most ESPN 100 SFs?--
+--26f. Which city has the most ESPN 100 SFs?--
 
 SELECT hometown, COUNT(hometown) AS number_of_players
 FROM espn_100
@@ -677,9 +677,9 @@ WHERE pos = 'SF'
 GROUP BY hometown
 ORDER BY number_of_players DESC
 
--- Answer: has produced the most ESPN 100 SFs with.
+-- Answer: Chicago, IL has produced the most ESPN 100 SFs with 8.
 
---6. Which state has the most ESPN 100 SFs?--
+--26g. Which state has the most ESPN 100 SFs?--
 
 SELECT state, COUNT(state) AS number_of_players
 FROM espn_100
@@ -687,9 +687,9 @@ WHERE pos = 'SF'
 GROUP BY state
 ORDER BY number_of_players DESC
 
--- Answer: has produced the most ESPN 100 SF with.
+-- Answer:California has produced the most ESPN 100 SF with 30.
 
---Which high school has produced the most ESPN 100 Small Forwards?--
+--26h. Which high school has produced the most ESPN 100 Small Forwards?--
 
 SELECT high_school, COUNT(high_school) AS number_of_players
 FROM espn_100
@@ -697,9 +697,9 @@ WHERE pos = 'SF'
 GROUP BY high_school
 ORDER BY number_of_players DESC
 
--- Answer: has produced the most ESPN 100 SF with.
+-- Answer: Oak Hill Academy has produced the most ESPN 100 SF with 12.
 
---What college has the most ESPN SFs--
+--26i. What college has the most ESPN SFs--
 
 SELECT school, COUNT(school) AS college_commits
 FROM espn_100
@@ -707,18 +707,18 @@ WHERE pos = 'SF'
 GROUP BY school
 ORDER BY college_commits DESC
 
--- Answer: has the most ESPN 100 SFs with .
+-- Answer:Duke has the most ESPN 100 SFs with 16.
 
---How many SFs were McDonald's All-Americans?--
+--26j. How many SFs were McDonald's All-Americans?--
 
 SELECT COUNT(*)
 FROM espn_100
 WHERE mcdonalds_aa = TRUE
 AND pos = 'SF'
 
--- Answer: McDonald's All-Americans were SFs.
+-- Answer: 69 McDonald's All-Americans were SFs.
 
---Let's see who these players are--
+--26k. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -727,16 +727,16 @@ AND pos = 'SF'
 
 --Answer: Run Code Above in SQL
 
---How many SFs played in the Jordan Brand Classic?--
+--26l. How many SFs played in the Jordan Brand Classic?--
 
 SELECT COUNT(*)
 FROM espn_100
 WHERE jbc = TRUE
 AND pos = 'SF'
 
--- Answer: Jordan Brand Classic Participants were SFs.
+-- Answer: 79 Jordan Brand Classic Participants were SFs.
 
---Let's see who these players are--
+--26m. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -746,7 +746,7 @@ AND pos = 'SF'
 --Answer: Run Code Above in SQL
 
 
---How many SFs were a McDonald's All-American and Jordan Brand Classic Participant?--
+--26n. How many SFs were a McDonald's All-American and Jordan Brand Classic Participant?--
 
 SELECT COUNT(*)
 FROM espn_100
@@ -754,9 +754,9 @@ WHERE mcdonalds_aa = TRUE
 OR jbc = TRUE
 AND pos = 'SF'
 
--- Answer: players that participated in either the McDonald's All-American Game or Jordan Brand Classic were SFs.
+-- Answer: 412 players that participated in either the McDonald's All-American Game or Jordan Brand Classic were SFs.
 
---Let's see who these players are--
+--26o. Let's see who these players are--
 
 SELECT class, player, pos, grade
 FROM espn_100
@@ -766,6 +766,25 @@ AND pos = 'SF'
 
 --Answer: Run Code Above in SQL
 
+--26p. How many SFs were a McDonald's All-American and Jordan Brand Classic Participant?--
+
+SELECT COUNT(*)
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND jbc = TRUE
+AND pos = 'SF'
+
+-- Answer: 51 players that participated in both the McDonald's All-American Game and Jordan Brand Classic were SFs.
+
+--26q. Let's see who these players are--
+
+SELECT class, player, pos, grade
+FROM espn_100
+WHERE mcdonalds_aa = TRUE
+AND jbc = TRUE
+AND pos = 'SF'
+
+--Answer: Run Code Above in SQL
 
 --Let's look into the Power Foward position--
 SELECT *
