@@ -9,6 +9,9 @@ __pycache__/
 data/
 Data/
 
+nssstats/
+NSSSTATS/
+
 # Distribution / packaging
 .Python
 build/
