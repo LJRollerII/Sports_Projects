@@ -10,6 +10,7 @@
 * [Marathon Training](#Header)
 * [Nashville Marathon](#Header)
 * [NBA Lineup Analysis](#Header)
+* [NCAA Championships, Budgets & Revenue](#Header)
 * [NFL Big Data Bowl 2022](#Header)
 * [North American Professional Sports Venues Map](#Header)
 * [Olympic History Data & Statistics](#Header)
@@ -109,6 +110,38 @@ Using the [NBA API](https://github.com/swar/nba_api) and [Streamlit](https://git
 
 Back to [Contents](#Header)
 
+# NCAA Championships, Budgets & Revenue
+
+Similar to the [Conference Realignment In College Football](https://github.com/LJRollerII/Conference_Realignment_In_College_Football) project, with conference realignment becoming increasingly popular due to the potential benefits of becoming more competitive in terms of recruiting, performace, facilities, media exposure, and revenue (Both television, merchandise, and ticket sales), we're investigating the impact of budget, operating expenses, revenue, media exposure, academics, and conference affiliation on the success of an athletic department.
+
+Through analysis of the data, we would also like to find out:
+
+1. Which schools have the most NCAA Championships (Total, Men's, Women's, & Coed)?
+2. Which school won the most championships in football, basketball (men & women) and baseball?
+3. For the schools that won the most championships in high revenue sports such as football and baksetball, are they successful in the other sports within their athletic department?
+4. For the top 40 schools with the most NCAA championships, did most of their championships come from one sports or is the school succesfull in multiple sports?
+5. Which conference have the most NCAA Championships (Total, Men's, Women's, & Coed)?
+6. Which conference won the most championships in football, basketball (men & women) and baseball?
+7. Which school/athletic department has won the most Capital One Cups (Men & Women)?
+8. Which school/athletic department has won the most Directors' Cups (Men & Women)?
+7. Which college sports have the highest revenue?
+9. What is the finincial breakdown of an athletic department, football program, and baskeball program in terms of revenue?
+10. Which schools have the highest budget and operating expenses?
+11. Which schools get the most TV viewrship for football and basketball?
+12. Which Conference gets the most TV viewership for football and basketball?
+13. What television network is profiting the most off college sports?
+14. Is there a correlation between academic and athletic success?
+15. Random interesting information we may find from analyzing the data.
+
+
+<u>*Note*</u>: The data for this project goes up to the 2022-2023 academic/athletic year. When analyzing data regarding conferences, teams are analyzed based on the conference they're in during the 2022-2023 season. We are aware of some of the teams may have won championships as members of a previous conference. In regards analyzing championships based on school and/or sport, there are some teams that have won championships that no longer compete at the Division I level (For Football we are analyzing both FBS and FCS teams).
+
+*<u>Visualization</u>*
+
+[NCAA Championships, Budgets & Revenue](https://public.tableau.com/app/profile/lance.roller/viz/NCAAChampionshipsBudgetsRevenue/NCAAChampionshipsBudgetsRevenue?publish=yes)
+
+Back to [Contents](#Header)
+
 # NFL Big Data Bowl 2022
 
 Implemented the [Streamlit](https://github.com/streamlit/streamlit) package in Python to create a web app that allows the user to view interesting special teams data from the NFL.
@@ -164,6 +197,16 @@ Foursih Studio, Power BI and Tableau for data visualizations
 
 [Bring Back The Mile](https://bringbackthemile.com/history/sub_4_sub_430)
 
+[Capital One Cup](https://www.capitalone.com/capital-one-cup/)
+
+[College Basketball Viewership](https://www.sportsbusinessjournal.com/Daily/Issues/2023/03/10/Media/ncaa-mens-college-basketball-season-viewership.aspx)
+
+[College Football Revenue](https://www.businessinsider.com/college-sports-football-revenue-2017-10)
+
+[College Sports With The Highest Profit/Revenue](https://www.yahoo.com/video/college-sports-most-money-130012417.html)
+
+[Directors' Cup](https://nacda.com/sports/2018/7/17/directorscup-nacda-directorscup-current-scoring-html.aspx)
+
 [ESPN 100 Basketball Recruiting Database](http://www.espn.com/college-sports/basketball/recruiting/playerrankings/_/class/2007/order/true)
 
 [ESPN Men's Tournament Challenge](https://fantasy.espn.com/tournament-challenge-bracket/2023/en/)
@@ -172,8 +215,26 @@ Foursih Studio, Power BI and Tableau for data visualizations
 
 [Foot Locker XC](https://www.footlockercc.com/)
 
+[Forbes Most Valuable College Basketball Teams](https://www.forbes.com/sites/chrissmith/2019/03/12/the-most-valuable-college-basketball-teams/?sh=14f17c923225)
+
+[Forbes Most Valuable College Football Teams](https://www.forbes.com/sites/chrissmith/2019/09/12/college-football-most-valuable-clemson-texas-am/?sh=10c69f4da2e7)
+
+[The National Collegiate Athletic Association](https://www.ncaa.com/)
+
+[Most Watched College Football Programs in 2021](https://medium.com/run-it-back-with-zach/which-college-football-programs-were-the-most-watched-in-2021-49ef4f315858)
+
+[Most Watched College Football Programs in 2022](https://medium.com/run-it-back-with-zach/which-college-football-programs-were-the-most-watched-in-2022-94eca4f6acbd)
+
+[NCAA Athletic Department Revenue](https://www.statista.com/chart/25236/ncaa-athletic-department-revenue/)
+
 [Nike Cross Nationals](https://www.runnerspace.com/NXN)
 
+[Richest College Basketball Programs](https://money.yahoo.com/richest-college-basketball-programs-america-210045624.html)
+
 [Sports Stadium Locations](https://www.kaggle.com/datasets/logandonaldson/sports-stadium-locations)
+
+[USA Track & Field](https://www.usatf.org/)
+
+[World Athletics](https://worldathletics.org/)
 
 Back to [Contents](#Header)
