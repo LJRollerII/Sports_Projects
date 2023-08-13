@@ -1,10 +1,14 @@
 # Sports Projects
 
+![Sports Projects Cover Photo](https://github.com/LJRollerII/Sports_Projects/blob/main/images/General%20Images/sports.png)
+
 # Contents
 * [Synopsis](#Header)
 * [2023 NCAA March Madness Tournament Simulation](#Header)
 * [Conference Realignment In College Football](#Header)
+* [ESPN Cricket Data Analysis](#Header)
 * [ESPN 100 Basketball Recruiting Database](#Header)
+* [FIFA World Cup Results](#Header)
 * [High School XC Nationals](#Header)
 * [Lahman Baseball](#Header)
 * [Marathon Training](#Header)
@@ -14,8 +18,10 @@
 * [NFL Big Data Bowl 2022](#Header)
 * [North American Professional Sports Venues Map](#Header)
 * [Olympic History Data & Statistics](#Header)
+* [UEFA Champions League Data & Statistics](#Header)
 * [United States Sub-4 Milers Database](#Header)
 * [United States Women Sub-4:30 Milers Database](#Header)
+* [Music](#Header)
 * [Data Sources & Tools](#Header)
 
 # Synopsis
@@ -48,6 +54,13 @@ Collected, cleaned, and analyzed data using Python to see if changing conference
 
 Back to [Contents](#Header)
 
+# ESPN Cricket Data Analysis
+
+Implemented the cricketdata library in R to analyze and visualize cricket data from ESPN.
+
+Back to [Contents](#Header)
+
+
 # ESPN 100 Baskeball Recruiting Database
 
 Collected, cleaned, explored and analyzed data from the ESPN 100 Baskeball Recruiting Rankings from 2007 (inaugural year) to 2022. 
@@ -65,6 +78,18 @@ Through analysis of the data, we would like to find out:
 *<u>Visualizations</u>*
 
 [Top ESPN 100 Basketball Recruiting Class By Year](https://public.flourish.studio/visualisation/12644117/)
+
+Back to [Contents](#Header)
+
+# FIFA World Cup Results
+
+Explored, analyzed, and visualized FIFA World Cup data from 1930-2014.
+
+*<u>Visualizations</u>*
+
+[FIFA World Cup Results 1930-2014 (Power BI)](https://app.powerbi.com/groups/me/reports/f76340ea-9e3d-40d0-b3a3-75c9d4bb6138/ReportSection?experience=power-bi)
+
+[FIFA World Cup Results 1930-2014 (Tableau)](https://public.tableau.com/app/profile/lance.roller/viz/WorldCupResults1930-2014_16917939681440/WorldCupResults1930-2014?publish=yes)
 
 Back to [Contents](#Header)
 
@@ -166,6 +191,17 @@ Implemented SQL queries to collect and analyze data on the modern Olympic Games 
 
 Back to [Contents](#Header)
 
+# UEFA Champions League Data & Statistics
+
+Explored, analyzed, and visualized from the UEFA Champions League.
+
+*<u>Visualizations</u>*
+
+[UEFA Champions League Data & Statistics](https://public.tableau.com/app/profile/lance.roller/viz/UEFAChampionsLeagueDataStatistics/UEFAChampionsLeagueDataStatistics?publish=yes)
+
+Back to [Contents](#Header)
+
+
 # United States Sub-4 Milers Database
 
 Explored and analyzed data through Python to learn the history and discover interesting trends about American runners who have run 
@@ -184,6 +220,12 @@ Explored and analyzed data through Python to learn the history and discover inte
 [US Women Sub-4:30 Milers](https://public.tableau.com/app/profile/lance.roller/viz/USWomenSub-430Milers/USWomenSub-430Milers?publish=yes)
 
 Back to [Contents](#Header)
+
+# Music
+
+Whether you're competing in the big game, tailgating, or getting ready to workout, here are some well known tunes in the sports world that will get you pumped!!
+
+[![Listen on Spotify](https://spotify-playlist-badge.vercel.app/api/spotify)](https://open.spotify.com/playlist/31x0J1aOqcnhBLs0LlXIXG?si=50821d7d76f74555)
 
 # Data Sources & Tools
 
@@ -213,6 +255,8 @@ Foursih Studio, Power BI and Tableau for data visualizations
 
 [ESPN Women's Tournament Challenge](https://fantasy.espn.com/tournament-challenge-bracket-women/2023/en/)
 
+[FIFA World Cup Results](https://www.kaggle.com/datasets/abecklas/fifa-world-cup)
+
 [Foot Locker XC](https://www.footlockercc.com/)
 
 [Forbes Most Valuable College Basketball Teams](https://www.forbes.com/sites/chrissmith/2019/03/12/the-most-valuable-college-basketball-teams/?sh=14f17c923225)
@@ -232,6 +276,8 @@ Foursih Studio, Power BI and Tableau for data visualizations
 [Richest College Basketball Programs](https://money.yahoo.com/richest-college-basketball-programs-america-210045624.html)
 
 [Sports Stadium Locations](https://www.kaggle.com/datasets/logandonaldson/sports-stadium-locations)
+
+[UEFA Champions League Data & Statistics](https://www.kaggle.com/datasets/basharalkuwaiti/champions-league-era-stats)
 
 [USA Track & Field](https://www.usatf.org/)
 
