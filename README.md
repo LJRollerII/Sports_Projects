@@ -221,11 +221,11 @@ Explored and analyzed data through Python to learn the history and discover inte
 
 Back to [Contents](#Header)
 
-# Music
+<!-- # Music
 
 Whether you're competing in the big game, tailgating, or getting ready to workout, here are some well known tunes in the sports world that will get you pumped!!
 
-[![Listen on Spotify](https://spotify-playlist-badge.vercel.app/api/spotify)](https://open.spotify.com/playlist/31x0J1aOqcnhBLs0LlXIXG?si=50821d7d76f74555)
+[![Listen on Spotify](https://spotify-playlist-badge.vercel.app/api/spotify)](https://open.spotify.com/playlist/31x0J1aOqcnhBLs0LlXIXG?si=50821d7d76f74555) -->
 
 # Data Sources & Tools
 
